@@ -1,6 +1,5 @@
-_base_ = (
-    '../../third_party/mmyolo/configs/yolov8/'
-    'yolov8_l_syncbn_fast_8xb16-500e_coco.py')
+_base_ = ('../../third_party/mmyolo/configs/yolov8/yolov8_l_syncbn_fast_8xb16-500e_coco.py')
+
 custom_imports = dict(
     imports=['yolo_world'],
     allow_failed_imports=False)
@@ -8,7 +7,7 @@ custom_imports = dict(
 # hyper-parameters
 num_classes = 16
 num_training_classes = 16
-max_epochs = 5  # Maximum training epochs
+max_epochs = 80  # Maximum training epochs
 close_mosaic_epochs = 10
 save_epoch_intervals = 5
 text_channels = 512
